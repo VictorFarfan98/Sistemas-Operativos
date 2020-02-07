@@ -4,6 +4,12 @@
 
 * Descargar un kernel compatible para modificar, en la carpeta raiz crear una carpeta y dentro un archivo *.c con el contenido de la funcion a crear. 
 * Crear un Makefile dentro de este misma carpeta
+* Regresar a la carpeta raíz del kernel
+* Abrir el archivo Makefile
+* Buscar la linea: 
+    * core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/
+    * Añadir la ruta *hello/* creada 
+    * core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ hello/
 * En la carpeta raiz del kernel ir a arch/x86/entry/syscalls y abrir el archivo syscalls_64.tbl (debido a que uso un SO de 64 bits)
 * Regresar a la carpeta raiz del kernel
 * Ir al directorio include/linux
