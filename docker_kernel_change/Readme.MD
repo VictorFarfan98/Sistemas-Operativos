@@ -1,0 +1,1 @@
+# Es imposible cambiar el kernel de un contenedor de Docker debido a que esté no contiene un Kernel. Un contenedor de Docker se monta y hace uso del Kernel del SO host, por lo que para añadir un nuevo system call se tiene que modificar el kernel del SO host. 
