@@ -5,3 +5,4 @@ docker_kernel_change/linux-5.5.tar
 docker_kernel_change/linux-5.5.tar.sign
 docker_kernel_change/linux-5.5.tar.xz
 *.zip
+docker_kernel_change/linux-5.4.18.tar.xz
