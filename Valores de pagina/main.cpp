@@ -1,20 +1,19 @@
-#include <iostream>
 #include <stdio.h>
-#include <stdlib.h>
 
-/* these are in no header file, and on some
-systems they have a _ prepended 
-These symbols have to be typed to keep the compiler happy
-Also check out brk() and sbrk() for information
-about heap */
+int temp_data = 0;
+static int temp_bss;
 
-extern char  etext, edata, end; 
-
-int main(int argc, char **argv)
+int main()
 {
-    printf("Code segment:      %10p\n", &etext);
-    printf("Data segment:      %10p\n", &edata);
-    printf("BSS:               %10p\n", &end);
-
-    return EXIT_SUCCESS;
+    int local_var = 0;
+    int *code_segment_address = (int *)&print_addr;
+    int *data_segment_address = &temp_data;
+    int *bss_address = &temp_bss;
+    int *stack_segment_address = &local_var;
+    
+    printf("Code Segment:     %10p\n", code_segment_address);
+    printf("Data Segment:     %10p\n", data_segment_address);
+    printf("BSS:              %10p\n", bss_address);
+    printf("Stack Segment:      %10p\n", stack_segment_address);
+    return 0;
 }
